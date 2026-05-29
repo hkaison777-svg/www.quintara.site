@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quintara | Luxury Culinary Experiences</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
+  <style>
+    :root {
+      --aqua: #00D4C8;
+      --deep-ocean: #050B1A;
+      --navy: #0A1428;
+    }
+
+    body {
+      font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important;
+      background-color: var(--deep-ocean);
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    .light {
+      background-color: #f0f7f7;
+      color: #1a1a1a;
+    }
+
+    /* Video Background */
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(5,11,26,0.78), rgba(5,11,26,0.85));
+      z-index: -1;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(0,212,200,0.2);
+    }
+
+    .luxury-hover {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+   
+    .luxury-hover:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 25px 50px -12px rgb(0 212 200 / 0.15);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden dark">
+  <!-- SIDEBAR -->
+  <div class="fixed left-0 top-0 h-full w-72 sidebar z-50 flex flex-col py-10 bg-[#0A1428]">
+    <div class="px-10 mb-16">
+      <div class="text-4xl tracking-widest text-[#00D4C8]">QUINTARA</div>
+    </div>
+    
+    <div class="flex flex-col gap-6 px-8 text-lg">
+      <a href="#offerings" class="hover:text-[#00D4C8] transition flex items-center gap-4 py-3 px-6 rounded-2xl hover:bg-white/5">
+        <i class="fas fa-gem"></i>
+        <span>What We Offer</span>
+      </a>
+      <a href="#contact" class="hover:text-[#00D4C8] transition flex items-center gap-4 py-3 px-6 rounded-2xl hover:bg-white/5">
+        <i class="fas fa-envelope"></i>
+        <span>Reserve Experience</span>
+      </a>
+    </div>
+
+    <div class="mt-auto px-8">
+      <div class="border-t border-[#00D4C8]/20 pt-8">
+        <p class="text-[#00D4C8] text-sm tracking-widest mb-4">GET IN TOUCH</p>
+        <a href="mailto:Hkaison777@gmail.com" class="block text-sm hover:text-[#00D4C8] transition mb-2">Hkaison777@gmail.com</a>
+        <a href="tel:+13453229140" class="block text-sm hover:text-[#00D4C8] transition">+1 (345) 322-9140</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="ml-72">
+    <nav class="fixed top-0 right-0 left-72 z-40 glass">
+      <div class="max-w-7xl mx-auto px-8 py-6 flex justify-end items-center">
+        <button id="theme-toggle" class="text-[#00D4C8] hover:text-white transition text-2xl">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO with Water Video -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="/home/workdir/attachments/71122-537102350_medium.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="relative z-10 text-center max-w-5xl px-6">
+        <h1 class="text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none mb-8">
+          Ocean Soul.<br>Extraordinary Dining.
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12">
+          Quintara — where the sea meets the table.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="#contact" class="px-12 py-6 bg-[#00D4C8] text-black font-medium tracking-widest hover:bg-white transition text-lg">REQUEST A CONSULTATION</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE OFFER -->
+    <section id="offerings" class="py-28">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-6xl text-center mb-20 text-[#00D4C8]">What We Offer</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="group luxury-hover bg-[#0A1428] rounded-3xl overflow-hidden">
+            <div class="h-80 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/600x800/?luxury-birthday-ocean')"></div>
+            <div class="p-8">
+              <h3 class="text-3xl mb-4 flex items-center gap-3"><i class="fas fa-birthday-cake text-[#00D4C8]"></i> Birthday Parties</h3>
+              <p class="text-gray-400">Ocean-inspired celebrations with bespoke menus and unforgettable experiences.</p>
+            </div>
+          </div>
+
+          <div class="group luxury-hover bg-[#0A1428] rounded-3xl overflow-hidden">
+            <div class="h-80 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/600x800/?private-dinner-yacht')"></div>
+            <div class="p-8">
+              <h3 class="text-3xl mb-4 flex items-center gap-3"><i class="fas fa-users text-[#00D4C8]"></i> Private Parties</h3>
+              <p class="text-gray-400">Exclusive gatherings with theatrical service and ocean-inspired cuisine.</p>
+            </div>
+          </div>
+
+          <div class="group luxury-hover bg-[#0A1428] rounded-3xl overflow-hidden">
+            <div class="h-80 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/600x800/?luxury-wedding-ocean')"></div>
+            <div class="p-8">
+              <h3 class="text-3xl mb-4 flex items-center gap-3"><i class="fas fa-ring text-[#00D4C8]"></i> Weddings</h3>
+              <p class="text-gray-400">Bespoke ocean-themed wedding receptions and intimate celebrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 bg-[#050B1A]">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <h2 class="text-6xl mb-8 text-[#00D4C8]">Begin Your Journey</h2>
+        <p class="text-2xl mb-12">Let us create something extraordinary together.</p>
+        
+        <form action="https://formspree.io/f/xlgvzala" method="POST" id="contactForm" class="space-y-6 max-w-2xl mx-auto">
+          <input type="text" name="name" placeholder="Your Name" required 
+                 class="w-full bg-transparent border border-[#00D4C8]/40 focus:border-[#00D4C8] rounded-2xl px-8 py-6 outline-none text-lg">
+          
+          <input type="email" name="email" placeholder="Email Address" required 
+                 class="w-full bg-transparent border border-[#00D4C8]/40 focus:border-[#00D4C8] rounded-2xl px-8 py-6 outline-none text-lg">
+          
+          <textarea name="message" placeholder="Tell us about your event..." rows="6" required
+                    class="w-full bg-transparent border border-[#00D4C8]/40 focus:border-[#00D4C8] rounded-3xl px-8 py-6 outline-none text-lg"></textarea>
+          
+          <button type="submit" class="w-full py-7 bg-[#00D4C8] text-black text-xl tracking-widest hover:bg-white transition font-medium">
+            SEND REQUEST
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-[#00D4C8]/10 bg-[#050B1A]">
+      <p class="text-[#00D4C8] text-3xl mb-4">QUINTARA</p>
+      <p class="text-gray-500">George Town, Cayman Islands</p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme Toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    const icon = toggleButton.querySelector('i');
+    const body = document.body;
+
+    function setTheme(theme) {
+      if (theme === 'light') {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved);
+      else setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+
+    toggleButton.addEventListener('click', () => {
+      const isLight = body.classList.contains('light');
+      setTheme(isLight ? 'dark' : 'light');
+    });
+
+    initTheme();
+
+    // Form Success
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', () => {
+      setTimeout(() => {
+        alert("✅ Thank you! Your Request will be acknowledged please wait bye 👋 .");
+      }, 800);
+    });
+  </script>
+</body>
+</html>
